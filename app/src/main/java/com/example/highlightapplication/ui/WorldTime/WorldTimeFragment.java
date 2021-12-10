@@ -14,36 +14,27 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.highlightapplication.R;
 import com.example.highlightapplication.databinding.FragmentWorldtimeBinding;
 
 
 public class WorldTimeFragment extends Fragment implements SearchView.OnQueryTextListener {
-
-    private WorldTimeViewModel slideshowViewModel;
-    private FragmentWorldtimeBinding binding;
+    SearchView worldtime_searchview;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        slideshowViewModel =
-                new ViewModelProvider(this).get(WorldTimeViewModel.class);
+        View view = inflater.inflate(R.layout.fragment_worldtime, container, false);
 
-        binding = FragmentWorldtimeBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
+        worldtime_searchview = view.findViewById(R.id.worldtime_searchview);
 
-        final SearchView search_view = binding.worldtimeSearchview;
-
-        search_view.setOnQueryTextListener(this);
-        search_view.setQueryHint("Search City for Weather");
+        worldtime_searchview.setOnQueryTextListener(this);
+        worldtime_searchview.setQueryHint("Search City for World Time");
         setHasOptionsMenu(true);
 
-        return root;
+        return view;
     }
 
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        binding = null;
-    }
+
 
     @Override
     public boolean onQueryTextSubmit(String query) {
@@ -57,7 +48,9 @@ public class WorldTimeFragment extends Fragment implements SearchView.OnQueryTex
         Log.d("query change", newText);
         if (newText.length() >= 3) {
             // seach for city
-            // networkingService.fetchCitiesData(newText);
+            //networkingService.fetchCitiesData(newText);
+           // https://www.amdoren.com/api/locations.php
+
         }
         else {
            /* adapter.cityList = new ArrayList<>(0);

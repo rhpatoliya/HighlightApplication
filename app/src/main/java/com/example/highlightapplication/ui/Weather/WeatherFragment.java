@@ -34,7 +34,6 @@ public class WeatherFragment extends Fragment implements SearchView.OnQueryTextL
     JsonService jsonService;
     RecyclerView recyclerView;
     SearchView search_view;
-    GlobalCity globalCity;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

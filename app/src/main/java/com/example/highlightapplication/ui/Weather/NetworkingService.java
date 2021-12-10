@@ -22,10 +22,11 @@ public class NetworkingService {
 String weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=";
 String weatherURL2 = "&appid=f59b4e088282b559b972242f999207eb";
 
+  //  https://www.amdoren.com/api/timezone.php?api_key=IBZzdLmM2yCYaXjgTZ6x&loc=New+York
 
     String url = "http://gd.geobytes.com/AutoCompleteCity?&q=";
-    String url2 ="&appid=f59b4e088282b559b972242f999207eb";
-
+//    String url2 ="&appid=f59b4e088282b559b972242f999207eb";
+//
     public static final ExecutorService networkingExecutor = Executors.newFixedThreadPool(4);
     static Handler networkHander = new Handler(Looper.getMainLooper());
 
@@ -44,7 +45,7 @@ String weatherURL2 = "&appid=f59b4e088282b559b972242f999207eb";
     NetworkingListener listener;
 
     public void fetchCitiesData(String text) {
-        String completeURL = url + text + url2;
+        String completeURL = url + text;
         connect(completeURL);
     }
 

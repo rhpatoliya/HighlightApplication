@@ -8,7 +8,11 @@
         <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_goldprice.xml" value="0.1140625" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1109375" />
         <entry key="app/src/main/res/layout/fragment_weather.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_worldtime.xml" value="0.1109375" />
+        <entry key="app/src/main/res/layout/goldprice_recyclerview.xml" value="0.1109375" />
+        <entry key="app/src/main/res/layout/home_recyclerview.xml" value="0.1109375" />
         <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.23020833333333332" />
         <entry key="app/src/main/res/layout/weather_recyclreview.xml" value="0.1213768115942029" />
         <entry key="app/src/main/res/layout/weatherdetails.xml" value="0.1213768115942029" />

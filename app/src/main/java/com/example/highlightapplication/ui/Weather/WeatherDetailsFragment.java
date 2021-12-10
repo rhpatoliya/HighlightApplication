@@ -1,5 +1,6 @@
 package com.example.highlightapplication.ui.Weather;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -29,7 +30,6 @@ public class WeatherDetailsFragment extends Fragment implements NetworkingServic
     GlobalCity globalCity ;
 
     public WeatherDetailsFragment(GlobalCity selectedCity) {
-        networkingService = new NetworkingService(this);
 
         globalCity=selectedCity;
         networkingService.fetchWeatherData(globalCity);
@@ -44,6 +44,7 @@ public class WeatherDetailsFragment extends Fragment implements NetworkingServic
 
         appContext=getActivity();
         jsonService=new JsonService();
+        networkingService = new NetworkingService(this);
 
 
         city_id = view.findViewById(R.id.city_id);
@@ -55,8 +56,10 @@ public class WeatherDetailsFragment extends Fragment implements NetworkingServic
 
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void APINetworkListner(String jsonString) {
+
         WeatherData weatherData = jsonService.parseWeatherAPIData(jsonString);
         temp_id.setText(weatherData.temp + " ");
 
