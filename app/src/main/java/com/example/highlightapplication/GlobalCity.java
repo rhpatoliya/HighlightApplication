@@ -10,6 +10,7 @@ public class GlobalCity {
     private String cityName;// Toronto , On,Canada
 
 
+
     GlobalCity(){}
     public GlobalCity(String city){
         this.cityName = city;
